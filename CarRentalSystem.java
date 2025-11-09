@@ -89,7 +89,7 @@ class Booking {
     }
 }
 
-public class Main {
+public class CarRentalSystem {
     private static List<Car> cars = new ArrayList<>();
     private static List<Customer> customers = new ArrayList<>();
     private static List<Booking> bookings = new ArrayList<>();
@@ -114,16 +114,36 @@ public class Main {
             choice = sc.nextInt();
 
             switch (choice) {
-                case 1 -> viewCars();
-                case 2 -> addCar();
-                case 3 -> updateCarAvailability();
-                case 4 -> registerCustomer();
-                case 5 -> viewCustomers();
-                case 6 -> createBooking();
-                case 7 -> viewBookings();
-                case 8 -> closeBooking();
-                case 9 -> System.out.println("👋 Thank you for using Car Rental System!");
-                default -> System.out.println("Invalid choice. Try again.");
+                case 1:
+                    viewCars();
+                    break;
+                case 2:
+                    addCar();
+                    break;
+                case 3:
+                    updateCarAvailability();
+                    break;
+                case 4:
+                    registerCustomer();
+                    break;
+                case 5:
+                    viewCustomers();
+                    break;
+                case 6:
+                    createBooking();
+                    break;
+                case 7:
+                    viewBookings();
+                    break;
+                case 8:
+                    closeBooking();
+                    break;
+                case 9:
+                    System.out.println("👋 Thank you for using Car Rental System!");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Try again.");
+                    break;
             }
         } while (choice != 9);
     }
